@@ -7,10 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>TESTING</h1>
+    <h1>Albums</h1>
 
     {% for album in albums %}
-    {{ album }}
+    <ul>
+        <li>{{ album.title }} (Released: {{ album.song_year }})<br>Artist: {{ album.artist.name }}<br>&emsp;Birthday: {{ album.artist.birthday }}<br>&emsp;Genre: {{ album.artist.genre }}</li>
+    </ul>
     {% endfor %}
 
     
