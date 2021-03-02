@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-{{ artist.name }} genre {{ artist.genre }}
+<div class="description">
+{{ artist.name }} 
+<br>
+Genre: {{ artist.genre }}
+<br>
+Birthday: {{artist.birthday}}
+</div>
+
+
+<a href="{% url 'index' %}">Home</a>
 {% endblock %}

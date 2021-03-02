@@ -5,7 +5,7 @@
 
     {% for album in albums %}
     <ul>
-        <li>{{ album.title }} (Released: {{ album.song_year }})<br>Artist: {{ album.artist.name }}<br>&emsp;Birthday: {{ album.artist.birthday }}<br>&emsp;Genre: {{ album.artist.genre }}</li>
+        <li>{{ album.title }} (Released: {{ album.song_year }})<br>Artist: <a href="{% url 'artist_info' pk=album.artist.pk %}">{{ album.artist.name }}</a></li>
     </ul>
     {% endfor %}
 
