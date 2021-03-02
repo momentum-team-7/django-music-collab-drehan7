@@ -5,7 +5,7 @@ from .models import Album, Artist
 
 
 def index(request):
-    albums = Album.objects.all()
+    albums = Album.objects.all().order_by('artist', 'pk')
     return render(request, 'index.html', {'albums': albums})
 
 

@@ -6,8 +6,12 @@
 
 ul li {
   font-size: 25px;
+  list-style: none;
   color: red;
   border: 1px solid black;
+}
+a {
+  text-decoration: none;
 }
 
 .description {
