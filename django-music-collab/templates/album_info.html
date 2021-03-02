@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="description">
+    {% if album.album_photo %}
+    <div class="album-image">
+        <img src="{{album.album_photo}}" alt="{{album.title}}">
+    </div>
+    {% endif %}
     {{ album.title}}
     <br>
     {{ album.artist.name }}
     <br>
-    {{album.song_year}}
+    {{album.album_year}}
+    <br>
 </div>
 <a href="{% url 'albums' %}">Back</a>
 {% endblock %}
