@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Testing</h1>
+{% for album in albums %}
+<h3><a href="{% url 'album_info' pk=album.pk %}">{{ album.title }}</a></h3>
+{% endfor %}
+
+<a href="{% url 'index' %}">Back</a>
+{% endblock %}
