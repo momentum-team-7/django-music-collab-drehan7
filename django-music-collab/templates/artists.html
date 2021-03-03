@@ -11,6 +11,9 @@
     {% endfor %}
 
 </div>
-<a href="{% url 'index' %}">Back</a>
-<a href="{% url 'add_artist' %}">Add Artist</a>
+<div class="main-nav">
+    <a href="{% url 'index' %}">Back</a>
+    <a href="{% url 'add_artist' %}">Add Artist</a>
+</div>
+
 {% endblock %}

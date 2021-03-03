@@ -8,7 +8,7 @@
     {% endif %}
     {{ album.title}}
     <br>
-    {{ album.artist.name }}
+    <a href="{% url 'artist_info' pk=album.artist.pk %}">{{ album.artist.name }}</a>
     <br>
     {{album.album_year}}
     <br>
