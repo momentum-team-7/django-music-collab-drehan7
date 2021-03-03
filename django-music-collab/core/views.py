@@ -1,5 +1,7 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from .models import Album, Artist
+from .forms import AlbumForm, ArtistForm
 
 # Create your views here.
 
@@ -27,3 +29,29 @@ def artist_info(request, pk):
 def album_info(request, pk):
     album = get_object_or_404(Album, pk=pk)
     return render(request, 'album_info.html', {'album': album})
+
+
+def add_album(request):
+    if request.method == 'POST':
+        form = AlbumForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+            return HttpResponseRedirect('/')
+
+    else:
+        form = AlbumForm()
+    return render(request, 'add_album.html', {'form': form})
+
+
+def add_artist(request):
+    if request.method == 'POST':
+        form = ArtistForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = ArtistForm()
+    return render(request, 'add_artist.html', {'form': form})

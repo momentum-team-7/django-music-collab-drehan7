@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add Artist</h1>
+<a href="{% url 'index' %}">Home</a>
+<a href="{% url 'add_album' %}">Add Album</a>
+
+<form action="{% url 'add_artist' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

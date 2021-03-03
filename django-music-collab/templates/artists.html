@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Testing</h1>
-{% for artist in artists %}
-<h3><a href="{% url 'artist_info' pk=artist.pk %}">{{ artist.name }}</a></h3>
-{% endfor %}
+
+<h1 class="page-title">Artists</h1>
+
+<div class="main-container">
+    {% for artist in artists %}
+        <div class="artist-name">
+            <a href="{% url 'artist_info' pk=artist.pk %}">{{ artist.name }}</a>
+        </div>
+    {% endfor %}
+
+</div>
 <a href="{% url 'index' %}">Back</a>
+<a href="{% url 'add_artist' %}">Add Artist</a>
 {% endblock %}

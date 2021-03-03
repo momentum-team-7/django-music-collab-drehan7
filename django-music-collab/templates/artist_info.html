@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="description">
+    {% if artist.picture %}
+    <img src="{{ artist.picture }}" alt="">
+    {% endif %}
 Primary Key: {{artist.pk}}
     <br>
 {{ artist.name }} 
