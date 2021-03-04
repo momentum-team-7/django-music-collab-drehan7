@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="{% url 'edit_artist' pk=artist.pk %}" method="post">
+    {% csrf_token %}
+    <div class="form-parts">
+        {{ form.as_p }}
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

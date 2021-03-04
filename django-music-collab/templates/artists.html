@@ -7,6 +7,10 @@
     {% for artist in artists %}
         <div class="artist-name">
             <a href="{% url 'artist_info' pk=artist.pk %}">{{ artist.name }}</a>
+            <div class="edit-del-buttons">
+                <a href="{% url 'edit_artist' pk=artist.pk %}" class="edit-link">Edit</a>
+                <a href="{% url 'delete_artist' pk=artist.pk %}" class="delete-link">Delete</a>
+            </div>
         </div>
     {% endfor %}
 

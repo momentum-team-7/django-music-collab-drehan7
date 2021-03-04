@@ -5,12 +5,19 @@
 
 <div class="main-container">
 
+    <div class="album-container">
     {% for album in albums %}
         <div class="album-title">
             <a href="{% url 'album_info' pk=album.pk %}">{{ album.title }}</a>
         </div>
+        <div class="edit-del-buttons">
+            <a href="{% url 'edit_album' pk=album.pk %}" class="edit-link">Edit</a>
+            <a href="{% url 'delete_album' pk=album.pk %}" class="delete-link">Delete</a>
+        </div>
     {% endfor %}
 
+
+    </div>
 </div>
 
 <div class="main-nav">

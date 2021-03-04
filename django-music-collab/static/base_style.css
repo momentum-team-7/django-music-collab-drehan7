@@ -4,6 +4,9 @@
   padding: 0;
 }
 .home-page {
+  margin-top: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   font-size: 50px;
   text-align: center;
 }
@@ -28,7 +31,6 @@ a {
 }
 
 .header-title-container {
-  border: 2px solid green;
   align-items: center;
   text-align: center;
   padding: 2rem;
@@ -40,14 +42,12 @@ a {
 }
 
 .navigation-bar {
-  border: 2px solid blue;
   text-align: center;
   margin-bottom: 5%;
 }
 
 .main-nav a {
-  border: 2px solid red;
-  color: black;
+  color: green;
   margin: 2%;
   text-decoration: none;
   font-size: 1.5rem;
@@ -60,16 +60,58 @@ a {
 }
 
 .main-container {
+  display: flex;
+  flex-direction: row;
   border: 2px solid red;
+}
+
+.album-container {
+  border: 2px solid blue;
+  margin: 2px;
 }
 
 .album-title,
 .artist-name {
+  display: flex;
   border: 2px solid black;
   margin: 1rem;
+  justify-content: space-between;
 }
 
 .album-title a,
 .artist-name a {
   font-size: 25px;
+}
+
+.edit-link {
+  text-decoration: none;
+  color: black;
+  border: 3px solid yellow;
+  background: yellow;
+}
+
+.delete-link {
+  text-decoration: none;
+  color: white;
+  border: 3px solid red;
+  background: red;
+}
+
+.form-parts {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  align-items: center;
+  justify-content: center;
+}
+.form-parts p {
+  width: 40rem;
+  text-align: center;
+  font-size: 20px;
+  margin: 5%;
+}
+
+.form-parts input {
+  font-size: 18px;
+  height: 2rem;
 }
